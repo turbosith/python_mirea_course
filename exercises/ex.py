@@ -15,9 +15,10 @@ def pyshader(func, w, h):
 def func(x, y):
     return x, y, 0
 
-
 label = tk.Label()
-label = tk.Canvas(width=700, height=700, bg="white")
-label.create_rectangle(100, 100, 600, 600, fill="black")
+img = tk.PhotoImage(data=pyshader(func, 256, 256)).zoom(2, 2)
 label.pack()
+label.config(image=img)
 tk.mainloop()
+
+

@@ -1,0 +1,27 @@
+digraph G {
+
+  subgraph cluster_0 {
+    style=filled;
+    color=lightgrey;
+    node [style=filled,color=white];
+    room1 -> room2->room4->room6->room7->room9->end;
+    room2 ->room1;
+    room3 ->room2;
+    room4 ->room2;
+    room6 ->room4;
+    room7 ->room6;
+    room8 ->room7;
+     room2 ->room3;
+     room3->room5;
+  room7 -> room8;
+  room7 -> room10;
+  room10 -> end;
+  room5 -> end;
+    label = "Текстовая игра";
+  }
+
+
+
+  room1 [color=gray];
+  end [ color=green];
+}
